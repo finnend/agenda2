@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Información de Pacientes</title>
+    <!-- Agrega el enlace a Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body class="container mt-5">
+
+    <h1 class="mb-4">Información de Pacientes</h1>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Datos Adicionales</th>
+                    <th scope="col">¿Se envío el mensaje de confirmación?</th>
+                    <th scope="col">¿Confirmó hora?</th>
+                    <th scope="col">¿Boleta?</th>
+                    <th scope="col">¿Pagó?</th>
+                    <!-- Agrega más columnas según sea necesario -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for paciente in data %}
+                <tr>
+                    <th scope="row">{{ paciente[0] }}</th>
+                    <td>{{ paciente[1] }}</td>
+                    <td>{{ paciente[2] }}</td>
+                    <td>{{ paciente[3] }}</td>
+                    <td>{{ paciente[4] }}</td>
+                    <td>{{ paciente[5] }}</td>
+                    <td>{{ paciente[6] }}</td>
+                    <td>{{ paciente[7] }}</td>
+                    <td>{{ paciente[8] }}</td>
+                    <!-- Agrega más columnas según sea necesario -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add the Bootstrap script from CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

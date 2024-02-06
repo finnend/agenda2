@@ -1,0 +1,28 @@
+CREATE TABLE `paciente` (
+  id int(11) AUTO INCREMENT NOT NULL,
+  PRIMARY KEY(id),
+  `NOMBRE` varchar(255) DEFAULT NULL,
+  `FECHA` date DEFAULT NULL,
+  `hora` varchar(255) DEFAULT NULL,
+  `OBSERVACIONES` varchar(255) DEFAULT NULL,
+  `pago` varchar(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE `paciente` (
+  `id` int(11) AUTO_INCREMENT NOT NULL,
+  PRIMARY KEY (id),
+  `NOMBRE` varchar(255) DEFAULT NULL,
+  `FECHA` date DEFAULT NULL,
+  `hora` varchar(255) DEFAULT NULL,
+  `datos_adicionales` varchar(255) DEFAULT NULL,
+  `mensaje_confirmacion` varchar(2) DEFAULT NULL,
+  `confirmo_hora` varchar(2) DEFAULT NULL,
+  `boleta` varchar(2) DEFAULT NULL,
+  `pago` varchar(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
